@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.form-group {
+    margin-top: 1em;
+    width: 50%;
+}
+
+label.form-label {
+    font-weight: bold;
+}
+
+.FormBtnsContainer {
+    margin-bottom: 10px;
+}
+
+.FormBtn {
+    margin-right: 20px;
+}

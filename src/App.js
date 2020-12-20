@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import myData from './myData.json';
+import DropdownMenu from './components/Dropdown/Dropdown';
+import { Button } from 'react-bootstrap';
+import ModalShow from './components/Modal/ModalShow'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    isModalOpen: false,
+    data: [],
+  };
+
+  showModal= () => {
+    this.setState({
+      isModalOpen: true
+    })
+  }
+
+  hideModal= () => {
+    this.setState({
+      isModalOpen: false
+    })
+  }
+
+  componentDidMount() {
+    this.setState({
+      data: myData,
+    });
+  }
+
+  render() {
+    return <div className="App">
+      <DropdownMenu data={this.state.data} />
+      <Button className="ModalButton" variant="primary" onClick={this.showModal}> Show Modal </Button>
+      <ModalShow data={this.state.data} isModalOpen={this.state.isModalOpen} hideModal={this.hideModal} />
+    </div>;
+  }
 }
 
 export default App;

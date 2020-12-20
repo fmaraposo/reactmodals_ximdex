@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "React",
+        "text": "It's a very cool Javascript framework"
+    },
+    {
+        "id": 2,
+        "title": "Vue",
+        "text": "Another cool Javascript framework"
+    }
+]

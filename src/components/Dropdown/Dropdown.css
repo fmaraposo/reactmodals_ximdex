@@ -1,0 +1,21 @@
+.DropdownContainer {
+    width: 100%;
+}
+
+.DropdownList {
+    padding: 0;
+    margin: 0 0 3em 0;
+}
+
+button#dropdown-basic {
+    width: 50%;
+    height: 45px;
+    font-size: 1.4em;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+a.dropdown-item {
+    font-weight: bold;
+    font-family: 'JetBrains Mono', monospace;
+}
+
