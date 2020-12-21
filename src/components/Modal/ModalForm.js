@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
-import myData from '../../myData.json';
 import './ModalForm.css';
 
 class ModalForm extends React.Component {
@@ -19,17 +18,19 @@ class ModalForm extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    myData.push(this.state);
+    const myUpdatedData = [...this.props.data];
+    myUpdatedData.push(this.state);
     this.props.hideModal();
   };
 
   closeForm = (event) => {
-    this.props.hideModal();
     event.preventDefault();
+    this.props.hideModal();
   };
+
   render() {
     return (
-      <div className="modalForm">
+      <div className="ModalForm">
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Title</Form.Label>
@@ -41,9 +42,11 @@ class ModalForm extends React.Component {
               value={this.state.title}
             />
           </Form.Group>
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Text</Form.Label>
             <Form.Control
+              as="textarea"
+              rows={3}
               type="text"
               placeholder="Enter some text"
               name="text"

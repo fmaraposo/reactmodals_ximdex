@@ -9,13 +9,19 @@
 
 button#dropdown-basic {
     width: 50%;
-    height: 45px;
+    height: 3em;
     font-size: 1.4em;
     font-family: 'JetBrains Mono', monospace;
+    background-color: #007bff;
 }
 
 a.dropdown-item {
     font-weight: bold;
     font-family: 'JetBrains Mono', monospace;
+}
+
+button.ModalButton.btn.btn-primary {
+    height: 3em;
+    font-size: 1.2em;
 }
 
