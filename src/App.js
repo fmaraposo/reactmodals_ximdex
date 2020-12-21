@@ -8,7 +8,7 @@ import ModalShow from './components/Modal/ModalShow';
 class App extends React.Component {
   state = {
     isModalOpen: false,
-    data: [],
+    data: myData,
   };
 
   showModal = () => {
@@ -22,13 +22,6 @@ class App extends React.Component {
       isModalOpen: false,
     });
   };
-
-  componentDidMount () {
-    this.setState({
-      data:myData
-    })
-    console.log('El Componente se ha montado')
-  }
 
   render() {
     return (

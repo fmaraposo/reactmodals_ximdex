@@ -18,8 +18,7 @@ class ModalForm extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const myUpdatedData = [...this.props.data];
-    myUpdatedData.push(this.state);
+    this.props.data.push(this.state)
     this.props.hideModal();
   };
 

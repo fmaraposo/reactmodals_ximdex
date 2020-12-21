@@ -14,14 +14,14 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
-.home-title span{
+.HomeTitle span{
   position: relative;
   overflow: hidden;
   display: block;
   line-height: 1.2;
 }
 
-.home-title span::after{
+.HomeTitle span::after{
   content: '';
   position: absolute;
   top: 0;
@@ -33,7 +33,7 @@
   transform: translateX(-101%);
 }
 
-.home-title span::before{
+.HomeTitle span::before{
   content: '';
   position: absolute;
   top: 0;
@@ -45,13 +45,13 @@
   transform: translateX(0);
 }
 
-.home-title span:nth-of-type(1)::before,
-.home-title span:nth-of-type(1)::after{
+.HomeTitle span:nth-of-type(1)::before,
+.HomeTitle span:nth-of-type(1)::after{
   animation-delay: 1s;
 }
 
-.home-title span:nth-of-type(2)::before,
-.home-title span:nth-of-type(2)::after{
+.HomeTitle span:nth-of-type(2)::before,
+.HomeTitle span:nth-of-type(2)::after{
   animation-delay: 1.5s;
 }
 

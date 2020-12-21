@@ -10,7 +10,7 @@ function DropdownMenu(props) {
           return (
             <ul className="DropdownList" key={index}>
               <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown.Toggle className="dropdown-toggle-ellipsis" variant="success" id="dropdown-basic">
                   {data.title}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
